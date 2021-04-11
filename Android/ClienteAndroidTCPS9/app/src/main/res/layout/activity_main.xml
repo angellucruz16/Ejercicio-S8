@@ -10,40 +10,51 @@
         android:id="@+id/botonArriba"
         android:layout_width="110dp"
         android:layout_height="115dp"
-        app:srcCompat="@drawable/boton_arriba"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="129dp" />
+        app:layout_constraintBottom_toTopOf="@+id/botonDisparo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/boton_arriba" />
 
     <ImageButton
         android:id="@+id/botonDerecha"
         android:layout_width="110dp"
         android:layout_height="115dp"
-        app:srcCompat="@drawable/boton_derecha"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="297dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonDisparo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boton_derecha" />
 
     <ImageButton
         android:id="@+id/botonAbajo"
         android:layout_width="110dp"
         android:layout_height="115dp"
-        app:srcCompat="@drawable/boton_abajo"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="436dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonDisparo"
+        app:srcCompat="@drawable/boton_abajo" />
 
     <ImageButton
         android:id="@+id/botonIzquierda"
         android:layout_width="110dp"
         android:layout_height="115dp"
-        app:srcCompat="@drawable/boton_izquierda"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="307dp" />
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonDisparo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boton_izquierda" />
 
     <ImageButton
         android:id="@+id/botonDisparo"
         android:layout_width="86dp"
         android:layout_height="91dp"
-        app:srcCompat="@drawable/disparo"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="310dp" />
+        app:layout_constraintBottom_toTopOf="@+id/botonAbajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonArriba"
+        app:srcCompat="@drawable/disparo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

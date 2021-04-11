@@ -37,38 +37,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tcp.start();
 
         //Metodo de suscripcion
-        botonArriba.setOnClickListener(this);
-        botonAbajo.setOnClickListener(this);
-        botonIzquierda.setOnClickListener(this);
-        botonDerecha.setOnClickListener(this);
+        botonArriba.setOnTouchListener(this);
+        botonAbajo.setOnTouchListener(this);
+        botonIzquierda.setOnTouchListener(this);
+        botonDerecha.setOnTouchListener(this);
         botonDisparo.setOnClickListener(this);
     }
     //metodo de notificacion
     @Override
     public void onClick(View v) {
-     /*   Gson gson = new Gson();
+
         switch (v.getId()){
-            case R.id.upBtn:
-                Coordenada arriba = new Coordenada("ARRIBA");
-                String enviarArriba = gson.toJson(arriba);
-                tcp.enviarMensaje(enviarArriba);
+            case R.id.botonDisparo:
+                Gson gson = new Gson();
+                Coordenada disparo = new Coordenada("PUMTAKATAKABUM");
+                String enviarDisparo = gson.toJson(disparo);
+                tcp.enviarMensaje(enviarDisparo);
                 break;
-            case R.id.rightBtn:
-                Coordenada derecha = new Coordenada("DERECHA");
-                String enviarDerecha = gson.toJson(derecha);
-                tcp.enviarMensaje(enviarDerecha);
-                break;
-            case R.id.downBtn:
-                Coordenada abajo = new Coordenada("ABAJO");
-                String enviarAbajo = gson.toJson( abajo);
-                tcp.enviarMensaje(enviarAbajo);
-                break;
-            case R.id.leftBtn:
-                Coordenada izquierda = new Coordenada("IZQUIERDA");
-                String enviarIzquierda = gson.toJson(izquierda);
-                tcp.enviarMensaje(enviarIzquierda);
-                break;
-        }*/
+        }
     }
 
 
